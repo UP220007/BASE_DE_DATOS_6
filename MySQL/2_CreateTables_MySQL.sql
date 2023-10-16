@@ -47,6 +47,7 @@ CREATE TABLE `Vendedores` (
   `Fecha_Nacimiento` DATETIME, 
   `Población` VARCHAR(50) DEFAULT 'Barcelona', 
   `Estado_Civil` VARCHAR(15), 
+  CONSTRAINT `CHECK_ESTADO_CIVIL` CHECK (Estado_Civil IN ('Arrejuntado', 'Casado', 'Divorciado', 'Separado', 'Soltero', 'Viudo')), 
   `Guapo` TINYINT(1),
   CONSTRAINT `CHECK_GUAPO` CHECK (`Guapo` IN (0, 1)),
   INDEX (`IdVendedor`),
