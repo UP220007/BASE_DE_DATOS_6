@@ -1,4 +1,6 @@
--- drop user verduleros cascade;
+alter session set "_ORACLE_SCRIPT"=true;
+
+drop user verduleros CASCADE;
 
 CREATE USER verduleros IDENTIFIED BY verduleros;
 
